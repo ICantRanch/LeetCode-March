@@ -25,19 +25,18 @@ public class SwapListNode {
 	public static ListNode swapNodes(ListNode head, int k) {
 
 		ArrayList<ListNode> nodes = new ArrayList<>();
-		
+
 		ListNode temp = head;
 		k = k-1;
-		
+
 		while(temp != null) {
 			nodes.add(temp);
 			temp = temp.next;
 		}
-		System.out.println(k);
 		int tVal = nodes.get(k).val;
-		nodes.get(k).val = nodes.get(nodes.size()-k).val;
-		nodes.get(nodes.size()-k).val = tVal;
-		
-		return nodes.get(0);
+		nodes.get(k).val = nodes.get(nodes.size()-1-k).val;
+		nodes.get(nodes.size()-1-k).val = tVal;
+
+		return nodes.get(0); 
 	}
 }
