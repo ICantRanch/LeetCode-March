@@ -3,8 +3,6 @@ package LeetCode.March;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.math3.stat.descriptive.AggregateSummaryStatistics;
-
 public class AverageBinaryTree {
 
 	public static class TreeNode {
